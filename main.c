@@ -1,32 +1,33 @@
 //
-// Created by wan on 1/2/16.
+// Created by Hexapetalous on 1/1/16.
 //
 #include <stdio.h>
 
 int main(void) {
-    printf("Input:");
+    printf("Input[1]:");
     int a;
     scanf("%d", &a);
-    if (2016 % a != 0) {
+    printf("Input[2]:");
+    int z;
+    scanf("%d", &z);
+    if (z % a != 0) {
         printf("No way. Exit.\n");
         return 0;
     }
-    int s = 2016;
-    printf("2016 = ");
+    int s = z;
+    printf("%d = ", z);
     int flag = 0, b;
-    for (b = 1111; b >= 1; b /= 10) {
+    for (b = 1; b < s; b = b * 10 + 1)
+        ;
+    for (b /= 10; b >= 1; b /= 10) {
         int t = a * b;
-        for (;;) {
-            if (s >= t) {
-                if (flag == 0)
-                    flag = 1;
-                else
-                    printf(" + ");
-                printf("%d", t);
-                s -= t;
-            }
+        for (; s >= t;) {
+            if (flag == 0)
+                flag = 1;
             else
-                break;
+                printf(" + ");
+            printf("%d", t);
+            s -= t;
         }
     }
     printf("\n");
