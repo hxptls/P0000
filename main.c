@@ -15,7 +15,8 @@
 int main(int argc, char * argv[]) {
     int a, z;
     Type t;
-    get_command_line_parameters(argc, argv, &t, &z, &a);
+    if (get_command_line_parameters(argc, argv, &t, &z, &a) != 0)
+        return 1;
     if (check_arguments(z, a) != 0)
         return 1;
     divide_into_numbers_with_same_digit_and_print(z, a);

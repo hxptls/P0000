@@ -18,7 +18,8 @@
  *  divisor: int*   the number that will cut `number` in some way
  * Returning code:
  *  0   good
- *  1   die
+ *  -1   die
+ *  1   nothing to do
  */
 typedef unsigned int Type;
 #define DIVIDE_WITH_SAME_DIGIT 0x0001
