@@ -29,8 +29,9 @@ int get_command_line_parameters(int argc, char * argv[], Type * type,
             ("version,v", "show version")
             ("number,n", po::value<int>(&inputNumber)->default_value(2016),
                 "the number that will be divided")
-            ("divisor,d", po::value<int>(&inputDivisor)->default_value(7),
-                "the dividing number")
+            ("decomposed-with,d",
+                po::value<int>(&inputDivisor)->default_value(7),
+                "the decomposing number")
             ("type,t",
                 po::value<string>(&inputType)
                         ->default_value(DEFAULT_TYPE),
@@ -70,11 +71,11 @@ int get_command_line_parameters(int argc, char * argv[], Type * type,
         cout << "This is P0000 version " << PROJECT_VERSION
              << " \"" << PROJECT_VERSION_TAG << "\". "
              << "By " << PROJECT_AUTHOR << "." << endl;
-        cout << "Copyright (c) 2015 Hexapetalous. All rights reserved." << endl;
+        cout << "Copyright (c) 2016 Hexapetalous. All rights reserved." << endl;
         cout << "This software is licensed under MIT License." << endl;
         return 1;
     }
-    if (variablesMap.count("number") && variablesMap.count("divisor") &&
+    if (variablesMap.count("number") && variablesMap.count("decomposed-with") &&
             variablesMap.count("type"))
     {
         *number = inputNumber;
