@@ -24,7 +24,17 @@
  *  1   die
  */
 int divide_into_numbers_with_same_digit_and_print(int number, int divider);
-
+/*
+ * The arguments' are the same.
+ * If `number` or `divider` is too big or small, or `number` is not divisible by
+ * `divider`, it will not pass the check.
+ * Output:
+ *  0   good
+ *  1   die
+ * The biggest value of `number` is defined with implementation and it should
+ * greater than 0. `divider` is between 0 and 9.
+ */
+int check_arguments(int number, int divider);
 #define P0000_PROC_H
 
 #endif //P0000_PROC_H

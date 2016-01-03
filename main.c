@@ -18,10 +18,8 @@ int main(void) {
     printf("Input[2]:");
     int z;
     scanf("%d", &z);
-    if (z % a != 0) {
-        printf("No way. Exit.\n");
-        return 0;
-    }
+    if (check_arguments(z, a) != 0)
+        return 1;
     divide_into_numbers_with_same_digit_and_print(z, a);
     printf("\n");
     return 0;
