@@ -10,14 +10,12 @@
  */
 #include <stdio.h>
 #include "proc.h"
+#include "parameters.h"
 
-int main(void) {
-    printf("Input[1]:");
-    int a;
-    scanf("%d", &a);
-    printf("Input[2]:");
-    int z;
-    scanf("%d", &z);
+int main(int argc, char * argv[]) {
+    int a, z;
+    Type t;
+    get_command_line_parameters(argc, argv, &t, &z, &a);
     if (check_arguments(z, a) != 0)
         return 1;
     divide_into_numbers_with_same_digit_and_print(z, a);

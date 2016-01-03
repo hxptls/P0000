@@ -9,9 +9,6 @@
  * The code is licensed to MIT License.
  */
 #ifndef P0000_PROC_H
-
-/*Interface********************************************************************/
-
 /*
  * This function assumes the arguments are legal:
  *  number:int  the big number that will be divided
