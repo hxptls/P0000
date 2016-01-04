@@ -6,12 +6,12 @@ A number division
 
 |Project ID |0000           |
 |:---------:|:--------------|
-|Version    |0.1 "Tenzor"   |
+|Version    |0.1.1          |
 |Author     |Hexapetalous   |
 |Date       |Jan 3, 2015    |
 |Satisfied  |No             |
 |OS         |elementary OS 0.3.2 Freya (64-bit)                 |
-|Hardware   |Dual-Core Intel(R) Core(TM) i5-4288U CPU @ 2.60GHz  |
+|Hardware   |Dual-Core Intel(R) Core(TM) i5-4288U CPU @ 2.60GHz |
 |Language   |C, C++         |
 |Compiler   |g++            |
 |Build tool |cmake          |
@@ -36,7 +36,6 @@ By the way, I haven't tried to build it without IDE.
         $ P0000 --n 2016 -d 2 -t power
         2016 = 2^10 + 2^9 + 2^8 + 2^7 + 2^6 + 2^5
 
--   Some model problems need thinking about.
 -   Maybe I'll think out something more. ^_^
 
 ****************

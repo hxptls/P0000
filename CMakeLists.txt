@@ -7,7 +7,10 @@
 # Copyright (c) 2016 Hexapetalous. All rights reserved.
 # The code is licensed to MIT License.
 #
-cmake_minimum_required(VERSION 3.3)
+
+# Because I only have 2.8 in my system.
+#cmake_minimum_required(VERSION 3.3)
+cmake_minimum_required(VERSION 2.8)
 project(P0000)
 
 set(BOOST_DIR "/usr/local/include")

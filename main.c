@@ -13,13 +13,17 @@
 #include "parameters.h"
 
 int main(int argc, char * argv[]) {
-    int a, z;
+    int n, d;
     Type t;
-    if (get_command_line_parameters(argc, argv, &t, &z, &a) != 0)
+    int status = get_command_line_parameters(argc, argv, &t, &n, &d);
+    if (status == -1)
         return 1;
-    if (check_arguments(z, a) != 0)
-        return 1;
-    divide_into_numbers_with_same_digit_and_print(z, a);
+    else if (status == 1)
+        return 0;
+
+    if (check_arguments(n, d) != 0)
+        return 0;
+    divide_into_numbers_with_same_digit_and_print(n, d);
     printf("\n");
     return 0;
 }
