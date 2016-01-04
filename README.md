@@ -11,7 +11,7 @@ A number division
 |Date       |Jan 3, 2015    |
 |Satisfied  |No             |
 |OS         |elementary OS 0.3.2 Freya (64-bit)                 |
-|Hardware   |Dual-Core Intel(R) Core(TM) i5-4288U CPU @ 2.60GHz  |
+|Hardware   |Dual-Core Intel(R) Core(TM) i5-4288U CPU @ 2.60GHz |
 |Language   |C, C++         |
 |Compiler   |g++            |
 |Build tool |cmake          |
