@@ -61,7 +61,17 @@ int get_command_line_parameters(int argc, char * argv[], Type * type,
     init_type_tag_dictionary();
     init_options_and_descriptions();
 
-    if (parameter_machine(argc, (const char * const *)argv) != 0)
+    int status;
+    try
+    {
+        status = parameter_machine(argc, (const char * const *)argv);
+    }
+    catch (exception e) //TODO: Figure out what exceptions this will be.
+    {
+        cout << "Error occurred when analyzing parameters." << endl;
+        return -1;
+    }
+    if (status != 0)
         // Input contains something I don't understand.
     {
         show_wrong_parameters();
@@ -123,7 +133,7 @@ int check_for_parameters(Type * type, int * number, int * divisor)
 
 void show_help(void)
 {
-    cout << description << endl;
+    cout << description;
     show_types();
     return;
 }
@@ -135,7 +145,6 @@ void show_wrong_parameters(void)
     for (iterator = unrecognized.begin(); iterator != iend; iterator++)
         cout << *iterator << " ";
     cout << endl;
-    show_help();
     return;
 }
 
